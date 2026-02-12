@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Safwan Shaikh | Futuristic Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg-light: linear-gradient(135deg, #f5f9ff, #e9f1ff);
+    --bg-dark: linear-gradient(135deg, #0f172a, #020617);
+    --text-light: #1f1f1f;
+    --text-dark: #e5e7eb;
+    --accent: #4e73ff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: 0.4s;
+}
+
+/* Dark Mode */
+body.dark {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+}
+
+body.dark .navbar {
+    background: rgba(15, 23, 42, 0.85);
+}
+
+body.dark .navbar .navbar-brand,
+body.dark .navbar .nav-link {
+    color: #e5e7eb !important;
+}
+
+body.dark .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Accent */
+.accent { color: var(--accent); }
+
+/* Glass Cards */
+.glass {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+body.dark .glass {
+    background: rgba(30,41,59,0.6);
+}
+
+.glass:hover {
+    transform: translateY(-6px);
+}
+
+/* Sections */
+section { padding: 80px 20px; }
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Cursor Glow */
+.cursor-glow {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(78,115,255,0.35);
+    pointer-events: none;
+    filter: blur(10px);
+    z-index: 9999;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #4e73ff, #6c8cff);
+    border: none;
+}
+
+/* Typing */
+.typing { color: var(--accent); font-weight: 600; }
+
+/* ✅ Modal Fix */
+.modal-content {
+    border-radius: 18px;
+    border: none;
+}
+
+body.dark .modal-content {
+    background: #1e293b;
+    color: #e5e7eb;
+}
+
+body.dark .modal-header {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark .modal-footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark .btn-close {
+    filter: invert(1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="cursor-glow"></div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold">Safwan Shaikh</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<li class="nav-item">
+<button id="themeToggle" class="btn btn-sm btn-outline-primary ms-3">🌙</button>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-6 reveal">
+<h1>Hello, I'm <span class="accent">Safwan Shaikh</span></h1>
+<h4>I’m a <span class="typing"></span></h4>
+<p class="mt-3">Building modern & scalable applications.</p>
+
+<a href="./src/0028SafwanShaikh.pdf" target="_blank" class="btn btn-primary">
+View Resume
+</a>
+</div>
+
+<div class="col-md-6 text-center reveal">
+<img src="./src/ProfilePic2.PNG" class="img-fluid rounded-4 shadow">
+</div>
+</div>
+</div>
+</section>
+
+<!-- About -->
+<section id="about">
+<div class="container">
+<h2 class="accent reveal">About Me</h2>
+<div class="glass p-4 reveal">
+<p>
+ I am a passionate Full Stack Developer with a strong foundation in Java, Spring Boot, .NET,
+  and modern Web Technologies. I enjoy building scalable, efficient, and user-focused applications 
+  that combine clean backend architecture with intuitive frontend design. Through academic training 
+  and hands-on projects, I have developed the ability to translate real-world problems into practical
+   technical solutions. I am 
+ continuously learning, exploring new technologies, and striving to improve my skills as a developer.
+</p>
+</div>
+</div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+<div class="container">
+<h2 class="accent reveal">Projects</h2>
+<div class="row">
+
+<div class="col-md-6 reveal">
+<div class="glass p-3">
+<h5>🍔 Burger Website</h5>
+<p>Full-stack burger ordering platform.</p>
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#burgerModal">
+View Details
+</button>
+</div>
+</div>
+
+<div class="col-md-6 reveal">
+<div class="glass p-3">
+<h5>🍽️ OrderHub Canteen</h5>
+<p>Smart campus canteen management system.</p>
+<button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#orderhubModal">
+View Details
+</button>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+<div class="container">
+<h2 class="accent reveal">Contact</h2>
+<div class="glass p-4 reveal">
+<p>Email: safwanshaikh053@gmail.com</p>
+<p>LinkedIn: https://www.linkedin.com/in/safwan-shaikh-715007250/</p>
+<p>Github: https://github.com/safwanshaikh053</p>
+</div>
+</div>
+</section>
+
+<footer class="text-center p-3">
+© 2026 Safwan Shaikh
+</footer>
+
+<!-- ✅ Burger Modal -->
+<div class="modal fade" id="burgerModal">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">🍔 Burger Website</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<p><strong>Tech Stack:</strong> HTML, CSS, JavaScript, Bootstrap, Node.js, Express.js</p>
+
+<p>
+Developed a full-stack burger ordering application enabling users to browse menu items,
+view pricing dynamically, and place orders through an interactive UI.
+</p>
+
+<p>
+Implemented responsive layouts, pricing logic, and backend APIs for handling order requests,
+ensuring a smooth user experience.
+</p>
+
+<p><strong>Key Contributions:</strong></p>
+<ul>
+<li>Frontend UI/UX design</li>
+<li>Dynamic DOM manipulation</li>
+<li>REST API integration</li>
+<li>Backend routing & logic</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<!-- ✅ OrderHub Modal -->
+<div class="modal fade" id="orderhubModal">
+<div class="modal-dialog modal-lg modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">🍽️ OrderHub Canteen</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+<p><strong>Tech Stack:</strong> Java, Spring Boot, REST APIs, HTML, CSS, JS, Bootstrap, MySQL</p>
+
+<p>
+Designed and developed a role-based smart canteen management system for campus environments.
+</p>
+
+<p>
+Implemented Admin, Staff, and Customer workflows including authentication,
+menu management, order processing, and inventory tracking.
+</p>
+
+<p><strong>Key Contributions:</strong></p>
+<ul>
+<li>Layered architecture implementation</li>
+<li>Database schema design</li>
+<li>REST API integration</li>
+<li>Frontend interface development</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* Typing */
+const roles = ["Full Stack Developer", "Java Developer", ".NET Developer"];
+let i = 0, j = 0, deleting = false;
+const typing = document.querySelector(".typing");
+
+function type() {
+    const text = roles[i];
+    typing.textContent = deleting ? text.substring(0, j--) : text.substring(0, j++);
+    if (!deleting && j === text.length + 1) { deleting = true; setTimeout(type, 1000); return; }
+    if (deleting && j === 0) { deleting = false; i = (i + 1) % roles.length; }
+    setTimeout(type, deleting ? 50 : 100);
+}
+type();
+
+/* Default Dark */
+document.body.classList.add("dark");
+
+/* Toggle */
+const toggleBtn = document.getElementById("themeToggle");
+toggleBtn.onclick = () => {
+    document.body.classList.toggle("dark");
+    toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+};
+
+/* Reveal */
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => entry.isIntersecting && entry.target.classList.add("active"));
+});
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+/* Cursor */
+const glow = document.querySelector(".cursor-glow");
+document.addEventListener("mousemove", e => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+});
+</script>
+
+</body>
+</html>
